@@ -36,7 +36,6 @@ public class LoginTest extends BaseTest{
     public void loginWithEmptyUserNameAndPassword(){
         loginPage.Login("","");
         Assert.assertEquals(loginPage.getTextFromErrorContainer(),"Epic sadface: Username is required");
-
     }
     @AfterMethod
     public void closeDriver() {

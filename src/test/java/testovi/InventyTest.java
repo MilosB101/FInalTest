@@ -23,7 +23,7 @@ public class InventyTest extends BaseTest{
 
     }
     @Test
-    public void addTwoItemsToCart(){
+    public void addThreeItemsToCart(){
         loginPage.Login("standard_user","secret_sauce");
         invetoryPage.sortItemByText("Price (low to high)");
         invetoryPage.clickSauceLabsOnesie();

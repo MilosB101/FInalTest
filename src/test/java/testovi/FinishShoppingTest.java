@@ -2,6 +2,7 @@ package testovi;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pageObject.*;
@@ -46,4 +47,10 @@ public class FinishShoppingTest extends BaseTest {
         Assert.assertEquals(finalPage.getCompleteText(),"Your order has been" +
                 " dispatched, and will arrive just as fast as the pony can get there!");
     }
+
+    @AfterMethod
+    public void closeDriver() {
+        driver.close();
+    }
 }
+
